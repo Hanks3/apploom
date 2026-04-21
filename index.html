@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loom Downloader</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ... (tus variables se mantienen igual) ... */
+        :root {
+            --bg-app: #0f172a;
+            --bg-card: #1e293b;
+            --primary: #3b82f6;
+            --primary-hover: #2563eb;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border: #334155;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--bg-app), #020617);
+            color: var(--text-main);
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            user-select: none;
+            overflow: hidden;
+            /* <--- CORRECCIÓN: Evita el scroll innecesario */
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            width: 380px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* <--- Centra todo el contenido */
+        }
+
+        /* ... (tus otros estilos se mantienen igual) ... */
+        h2 {
+            margin-top: 0;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 14px 16px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background-color: rgba(0, 0, 0, 0.2);
+            color: var(--text-main);
+            outline: none;
+        }
+
+        button#btnDescargar {
+            width: 100%;
+            background-color: var(--primary);
+            color: white;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        #btnDonar:hover {
+            opacity: 1 !important;
+            text-decoration: underline !important;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <h2>Loom Downloader</h2>
+        <p class="subtitle">Guarda tus videos localmente sin perder calidad.</p>
+
+        <div
+            style="background-color: rgba(0,0,0,0.2); padding: 15px; border-radius: 8px; margin-bottom: 20px; text-align: left; font-size: 13px; width: 100%; box-sizing: border-box;">
+            <p style="margin-top: 0; color: #61dafb; font-weight: bold;">Configuración Inicial:</p>
+            <ol style="padding-left: 20px; margin-bottom: 10px; color: var(--text-muted); line-height: 1.4;">
+                <li>Abre Loom en tu navegador.</li>
+                <li>Usa la extensión <i>Get cookies.txt LOCALLY</i> para descargar tus cookies y asegurate de renombrar
+                    el archivo a cookies.txt.</li>
+                <li>Carga el archivo aquí abajo:</li>
+            </ol>
+            <input type="file" id="inputCookies" accept=".txt"
+                style="margin-bottom: 0; padding: 8px; font-size: 12px; cursor: pointer; width: 100%;">
+        </div>
+
+        <div style="margin-bottom: 20px; text-align: left; width: 100%;">
+            <p style="margin-top: 0; margin-bottom: 8px; color: var(--text-muted); font-size: 13px;">Guardar video en:
+            </p>
+            <div style="display: flex; gap: 10px; align-items: center;">
+                <button id="btnCarpeta"
+                    style="padding: 10px; font-size: 12px; background-color: #475569; width: auto; white-space: nowrap; cursor: pointer; border: none; border-radius: 6px; color: white;">Elegir
+                    Carpeta</button>
+                <div id="textoCarpeta"
+                    style="font-size: 11px; color: #cbd5e1; background: rgba(0,0,0,0.2); padding: 10px; border-radius: 6px; flex-grow: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                    Descargas (Por defecto)
+                </div>
+            </div>
+        </div>
+
+        <input type="text" id="inputUrl" placeholder="Pega el enlace de Loom aquí..." autocomplete="off"
+            spellcheck="false">
+
+        <button id="btnDescargar">Descargar Video</button>
+
+        <p id="estado" style="margin-top: 15px; font-size: 13px;">Esperando enlace...</p>
+
+        <div
+            style="margin-top: 20px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.1); width: 100%; text-align: center;">
+            <a href="#" id="btnDonar"
+                style="color: #f472b6; text-decoration: none; font-size: 13px; font-weight: 500; display: inline-flex; align-items: center; gap: 6px; transition: 0.3s; opacity: 0.8;">
+                <span>❤️</span> Apoyar este proyecto
+            </a>
+        </div>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+
+</html>
