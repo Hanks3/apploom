@@ -3,16 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loom Downloader</title>
+    <title>Hanks3 Universal Downloader</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* ... (tus variables se mantienen igual) ... */
         :root {
             --bg-app: #0f172a;
-            --bg-card: #1e293b;
             --primary: #3b82f6;
-            --primary-hover: #2563eb;
             --text-main: #f8fafc;
             --text-muted: #94a3b8;
             --border: #334155;
@@ -27,114 +23,208 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            user-select: none;
             overflow: hidden;
-            /* <--- CORRECCIÓN: Evita el scroll innecesario */
         }
 
         .card {
             background: rgba(255, 255, 255, 0.03);
-            padding: 30px;
-            border-radius: 16px;
+            padding: 40px;
+            border-radius: 24px;
             border: 1px solid rgba(255, 255, 255, 0.08);
-            width: 380px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            width: 820px;
+            /* Ancho total de la tarjeta */
             display: flex;
             flex-direction: column;
-            align-items: center;
-            /* <--- Centra todo el contenido */
+            box-sizing: border-box;
         }
 
-        /* ... (tus otros estilos se mantienen igual) ... */
         h2 {
-            margin-top: 0;
-            font-weight: 700;
-            color: #fff;
-            margin-bottom: 8px;
+            margin: 0;
+            text-align: center;
+            font-size: 32px;
+            font-weight: 800;
         }
 
         .subtitle {
             color: var(--text-muted);
-            font-size: 14px;
-            margin-bottom: 24px;
+            font-size: 16px;
+            margin-bottom: 30px;
+            text-align: center;
         }
 
+        /* SECCIÓN SUPERIOR: THUMB + TUTORIAL */
+        .top-row {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 25px;
+            height: 320px;
+            width: 100%;
+            /* Obligamos a usar el 100% del espacio interno */
+            box-sizing: border-box;
+        }
+
+        .thumb-container {
+            flex: 1;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            border: 2px dashed rgba(255, 255, 255, 0.1);
+        }
+
+        .tutorial-box {
+            flex: 1.2;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 25px;
+            border-radius: 16px;
+            font-size: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+
+        /* FILA DE ACCIONES (CARPETA + CALIDAD) */
+        .action-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 20px;
+            margin-bottom: 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* INPUT DE ENLACE: ALINEACIÓN TOTAL */
         input[type="text"] {
             width: 100%;
-            padding: 14px 16px;
-            margin-bottom: 20px;
+            /* Ahora se alineará perfectamente con la top-row */
+            padding: 16px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            background: rgba(0, 0, 0, 0.2);
+            color: #fff;
+            font-size: 15px;
+            outline: none;
+            box-sizing: border-box;
+            /* Crucial para la alineación */
+        }
+
+        .btn-main {
+            background: var(--primary);
+            color: #fff;
+            padding: 18px;
+            border: none;
+            border-radius: 12px;
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 18px;
+            transition: 0.3s;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .btn-main:hover {
+            background: #2563eb;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
+        }
+
+        .highlight {
+            color: #f472b6;
+            font-weight: 600;
+        }
+
+        #estado {
+            text-align: center;
+            font-size: 14px;
+            margin: 15px 0;
+            color: #10b981;
+            font-weight: 500;
+        }
+
+        .file-input-group {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 10px;
             border-radius: 8px;
             border: 1px solid var(--border);
-            background-color: rgba(0, 0, 0, 0.2);
-            color: var(--text-main);
-            outline: none;
-        }
-
-        button#btnDescargar {
-            width: 100%;
-            background-color: var(--primary);
-            color: white;
-            padding: 14px;
-            border: none;
-            border-radius: 8px;
-            font-weight: 600;
-            cursor: pointer;
-        }
-
-        #btnDonar:hover {
-            opacity: 1 !important;
-            text-decoration: underline !important;
-            transform: scale(1.05);
+            margin-top: 10px;
         }
     </style>
 </head>
 
 <body>
     <div class="card">
-        <h2>Loom Downloader</h2>
-        <p class="subtitle">Guarda tus videos localmente sin perder calidad.</p>
+        <h2>Universal Downloader</h2>
+        <p class="subtitle">YouTube, Loom, Instagram y +1000 sitios</p>
 
-        <div
-            style="background-color: rgba(0,0,0,0.2); padding: 15px; border-radius: 8px; margin-bottom: 20px; text-align: left; font-size: 13px; width: 100%; box-sizing: border-box;">
-            <p style="margin-top: 0; color: #61dafb; font-weight: bold;">Configuración Inicial:</p>
-            <ol style="padding-left: 20px; margin-bottom: 10px; color: var(--text-muted); line-height: 1.4;">
-                <li>Abre Loom en tu navegador.</li>
-                <li>Usa la extensión <i>Get cookies.txt LOCALLY</i> para descargar tus cookies y asegurate de renombrar
-                    el archivo a cookies.txt.</li>
-                <li>Carga el archivo aquí abajo:</li>
-            </ol>
-            <input type="file" id="inputCookies" accept=".txt"
-                style="margin-bottom: 0; padding: 8px; font-size: 12px; cursor: pointer; width: 100%;">
-        </div>
+        <div class="top-row">
+            <div id="thumbContainer" class="thumb-container">
+                <span id="placeholder-text" style="color: var(--text-muted);">Vista previa del video...</span>
+                <img id="videoThumb" src="" alt="Miniatura"
+                    style="display: none; width: 100%; height: 100%; object-fit: cover;">
+            </div>
 
-        <div style="margin-bottom: 20px; text-align: left; width: 100%;">
-            <p style="margin-top: 0; margin-bottom: 8px; color: var(--text-muted); font-size: 13px;">Guardar video en:
-            </p>
-            <div style="display: flex; gap: 10px; align-items: center;">
-                <button id="btnCarpeta"
-                    style="padding: 10px; font-size: 12px; background-color: #475569; width: auto; white-space: nowrap; cursor: pointer; border: none; border-radius: 6px; color: white;">Elegir
-                    Carpeta</button>
-                <div id="textoCarpeta"
-                    style="font-size: 11px; color: #cbd5e1; background: rgba(0,0,0,0.2); padding: 10px; border-radius: 6px; flex-grow: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                    Descargas (Por defecto)
+            <div class="tutorial-box">
+                <p style="color: #61dafb; font-weight: bold; margin: 0 0 10px 0; font-size: 16px;">📖 Guía de uso
+                    completa:</p>
+                <p style="margin: 5px 0;"><b>1. Descarga Normal:</b> Pega el enlace abajo y listo.</p>
+                <p style="margin: 10px 0 5px 0;"><b>2. Videos Privados (Loom, etc.):</b></p>
+                <ul style="margin: 0; padding-left: 18px; color: var(--text-muted); font-size: 13px;">
+                    <li>Usa el addon <span class="highlight">Get cookies.txt LOCALLY</span>.</li>
+                    <li>Pulsa <b>"Export"</b> y renombra a <code style="color:#fff;">cookies.txt</code>.</li>
+                </ul>
+                <div class="file-input-group">
+                    <label for="inputCookies"
+                        style="cursor: pointer; background: #475569; padding: 6px 12px; border-radius: 6px; font-size: 12px; font-weight: 600; color: #fff;">Cargar
+                        archivo</label>
+                    <input type="file" id="inputCookies" accept=".txt" style="display: none;">
+                    <span id="fileNameDisplay"
+                        style="font-size: 11px; color: var(--text-muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">Ningún
+                        archivo...</span>
                 </div>
             </div>
         </div>
 
-        <input type="text" id="inputUrl" placeholder="Pega el enlace de Loom aquí..." autocomplete="off"
-            spellcheck="false">
-
-        <button id="btnDescargar">Descargar Video</button>
-
-        <p id="estado" style="margin-top: 15px; font-size: 13px;">Esperando enlace...</p>
-
-        <div
-            style="margin-top: 20px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.1); width: 100%; text-align: center;">
-            <a href="#" id="btnDonar"
-                style="color: #f472b6; text-decoration: none; font-size: 13px; font-weight: 500; display: inline-flex; align-items: center; gap: 6px; transition: 0.3s; opacity: 0.8;">
-                <span>❤️</span> Apoyar este proyecto
-            </a>
+        <div class="action-grid">
+            <div style="display: flex; gap: 10px;">
+                <button id="btnCarpeta"
+                    style="background: #475569; color: white; border: none; border-radius: 8px; padding: 0 18px; cursor: pointer; font-weight: 600;">📁
+                    Carpeta</button>
+                <div id="textoCarpeta"
+                    style="background: rgba(0,0,0,0.2); padding: 12px; border-radius: 8px; font-size: 13px; flex-grow: 1; display: flex; align-items: center; border: 1px solid var(--border); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                    Descargas...</div>
+            </div>
+            <select id="selectCalidad">
+                <option value="mejor">🚀 Máxima Calidad (MP4)</option>
+                <option value="1080p">📺 Full HD (1080p)</option>
+                <option value="720p">📱 HD Estándar (720p)</option>
+                <option value="audio">🎵 Solo Audio (MP3)</option>
+            </select>
         </div>
+
+        <input type="text" id="inputUrl" placeholder="Pega el enlace del video aquí..." autocomplete="off">
+
+        <button id="btnDescargar" class="btn-main">Descargar Video</button>
+
+        <div id="contenedor-progreso"
+            style="width: 100%; background: rgba(0,0,0,0.3); border-radius: 10px; margin-top: 15px; display: none; overflow: hidden;">
+            <div id="barra-progreso"
+                style="width: 0%; height: 10px; background: var(--primary); transition: width 0.3s;"></div>
+        </div>
+
+        <p id="estado">Esperando enlace...</p>
+
+        <a href="#" id="btnDonar"
+            style="color: #f472b6; text-decoration: none; font-size: 13px; text-align: center; display: block; opacity: 0.6; margin-top: 10px;">❤️
+            Apoyar este proyecto</a>
     </div>
 
     <script src="renderer.js"></script>

@@ -3,10 +3,10 @@ const path = require('path');
 
 function crearVentana() {
     const mainWindow = new BrowserWindow({
-        width: 550,
-        height: 750,
+        width: 870,
+        height: 870,         // Altura fija y cómoda para cualquier monitor
         resizable: false,
-        icon: path.join(__dirname, 'icon.ico'),
+        maximizable: false,
         webPreferences: {
             nodeIntegration: true,
             contextIsolation: false
@@ -27,6 +27,15 @@ ipcMain.handle('abrir-selector-carpeta', async () => {
         return null; // Si el usuario cierra la ventana sin elegir nada
     } else {
         return resultado.filePaths[0]; // Devolvemos la ruta de la carpeta elegida
+    }
+});
+
+// Escuchamos la orden de cambiar el tamaño de la ventana
+ipcMain.on('resize-window', (event, width, height) => {
+    const win = BrowserWindow.getFocusedWindow();
+    if (win) {
+        win.setSize(width, height, true); // El 'true' añade una animación suave
+        win.center(); // Opcional: vuelve a centrar la ventana tras el cambio
     }
 });
 

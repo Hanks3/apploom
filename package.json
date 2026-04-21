@@ -1,7 +1,7 @@
 {
-  "name": "apploom",
-  "version": "1.0.0",
-  "description": "Descargador de videos de Loom",
+  "name": "universal-downloader",
+  "version": "2.0.0",
+  "description": "Descargador de videos Universal",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
@@ -12,8 +12,8 @@
   "license": "ISC",
   "type": "commonjs",
   "build": {
-    "appId": "com.hanks3.apploom",
-    "productName": "Loom Downloader",
+    "appId": "com.hanks3.universalDownloader",
+    "productName": "Hanks3 Universal Downloader",
     "directories": {
       "output": "dist"
     },
