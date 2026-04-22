@@ -4,8 +4,10 @@ const path = require('path');
 function crearVentana() {
     const mainWindow = new BrowserWindow({
         width: 870,
-        height: 870,         // Altura fija y cómoda para cualquier monitor
-        resizable: false,
+        height: 870,
+        minWidth: 500,
+        minHeight: 500,
+        resizable: true,
         maximizable: false,
         webPreferences: {
             nodeIntegration: true,
@@ -17,25 +19,31 @@ function crearVentana() {
     mainWindow.setMenuBarVisibility(false);
 }
 
-// ¡NUEVO! El puente de comunicación para seleccionar la carpeta
 ipcMain.handle('abrir-selector-carpeta', async () => {
     const resultado = await dialog.showOpenDialog({
-        properties: ['openDirectory'] // Le decimos a Windows que solo queremos carpetas
+        properties: ['openDirectory']
     });
 
     if (resultado.canceled) {
-        return null; // Si el usuario cierra la ventana sin elegir nada
+        return null;
     } else {
-        return resultado.filePaths[0]; // Devolvemos la ruta de la carpeta elegida
+        return resultado.filePaths[0];
     }
 });
 
-// Escuchamos la orden de cambiar el tamaño de la ventana
+ipcMain.handle('abrir-selector-cookies', async () => {
+    const resultado = await dialog.showOpenDialog({
+        properties: ['openFile'],
+        filters: [{ name: 'Archivos de Texto', extensions: ['txt'] }]
+    });
+    return resultado.canceled ? null : resultado.filePaths[0];
+});
+
 ipcMain.on('resize-window', (event, width, height) => {
     const win = BrowserWindow.getFocusedWindow();
     if (win) {
-        win.setSize(width, height, true); // El 'true' añade una animación suave
-        win.center(); // Opcional: vuelve a centrar la ventana tras el cambio
+        win.setSize(width, height, true);
+        win.center();
     }
 });
 
