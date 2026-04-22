@@ -1,4 +1,4 @@
-# 🚀 Hanks3 Universal Downloader v2.5.0
+# 🚀 Hanks3 Universal Downloader v2.5.1
 
 **Universal Downloader** es una aplicación de escritorio profesional construida con **Electron** y potenciada por **yt-dlp**. Diseñada para ser rápida, intuitiva y, sobre todo, adaptable a cualquier pantalla.
 
@@ -8,6 +8,7 @@
 * 📜 **Gestión de Historial:** Panel lateral inteligente para abrir tus videos, localizarlos en la carpeta o eliminarlos físicamente del disco directamente desde la app.
 * 🔄 **Actualización de Motor:** Mantén siempre la compatibilidad con +1000 sitios gracias al botón de actualización integrada de `yt-dlp`.
 * 🖼️ **Vista Previa en Tiempo Real:** Visualización instantánea de miniaturas para confirmar el video antes de la descarga.
+* ❤️ **Apoyo:** Si te gusta mi trabajo, considera apoyarme en [Buy Me a Coffee](https://buymeacoffee.com/hanks3)
 
 ## 🛠️ Requisitos
 * Tener `yt-dlp.exe` y `ffmpeg.exe` en la raíz de la aplicación.
