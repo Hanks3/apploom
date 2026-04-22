@@ -1,50 +1,49 @@
-# 🚀 Hanks3 Universal Downloader
+# 🚀 Hanks3 Universal Downloader v2.2.0
 
-**Hanks3 Universal Downloader** es una herramienta de escritorio potente, minimalista y fácil de usar, diseñada para descargar videos de **YouTube, Loom, Instagram, TikTok** y más de 1000 sitios web con la máxima calidad disponible.
-
----
-
-## ✨ Características Principales
-* 🌍 **Soporte Universal:** Compatible con casi cualquier plataforma de video gracias al motor `yt-dlp`.
-* 📺 **Calidad a tu Medida:** Elige entre Full HD, HD o extrae solo el audio en formato **MP3**.
-* 🖼️ **Vista Previa:** Carga automática de miniaturas para confirmar el video antes de bajarlo.
-* 📊 **Progreso en Vivo:** Barra de estado que indica el porcentaje real de la descarga.
-* 🔐 **Soporte de Privacidad:** Gestión de archivos `cookies.txt` para descargar videos privados o con restricción de edad.
+**Universal Downloader** es una potente aplicación de escritorio basada en Electron y yt-dlp, diseñada para descargar video y audio de más de 1000 plataformas con una interfaz que se adapta perfectamente a tu espacio de trabajo.
 
 ---
 
-## 📖 Guía de Uso Rápido
-
-### 1. Descargas Estándar (YouTube, etc.)
-1.  Copia el enlace del video.
-2.  Pégalo en la aplicación.
-3.  Elige la carpeta de destino y la calidad deseada.
-4.  ¡Pulsa **Descargar** y listo!
-
-### 2. Videos Privados o Protegidos (Loom, etc.)
-Si el video requiere que estés logueado para verlo, sigue estos pasos:
-1.  Instala la extensión **"Get cookies.txt LOCALLY"** en tu navegador.
-2.  Abre el video en tu navegador, pulsa el icono de la extensión y haz clic en **Export**.
-3.  **Renombra** el archivo descargado exactamente a `cookies.txt`.
-4.  Carga ese archivo en la aplicación usando el botón correspondiente y procede a la descarga.
+## 🌟 Características Destacadas
+* 📱 **Interfaz Adaptable (Responsive):** Diseño proporcional único que escala elementos y fuentes según el tamaño de la ventana. Ideal para monitores 4K o pantallas pequeñas de portátiles.
+* 🖼️ **Vista Previa Inteligente:** Confirmación visual inmediata del contenido antes de iniciar la descarga.
+* 🔐 **Gestión de Cookies Avanzada:** Selector nativo para cargar archivos `cookies.txt`, permitiendo el acceso a contenido privado o restringido.
+* ⚙️ **Calidad Flexible:** Descarga desde audio MP3 hasta video en Full HD (1080p).
+* ⚡ **Optimizado para Redes Sociales:** Parches específicos para saltar las restricciones de Instagram Reels y YouTube.
 
 ---
 
-## 🛠️ Instalación
-1.  Ve a la sección de [Releases](https://github.com/Hanks3/apploom/releases).
-2.  Descarga el archivo `Hanks3.Universal.Downloader.Setup.2.0.0.exe`.
-3.  Ejecuta el instalador y ¡disfruta!
+## 📖 Guía de Uso
+
+### Instalación
+1. Descarga el instalador `.exe` desde la sección de [Releases](https://github.com/Hanks3/apploom/releases).
+2. Ejecuta `Hanks3.Universal.Downloader.Setup.2.2.0.exe`.
+
+### Descargar de Instagram / Contenido Privado
+Para obtener los mejores resultados en sitios con restricciones:
+1. **Loguéate** en el sitio (ej. Instagram) desde tu navegador Chrome/Edge.
+2. Usa la extensión **"Get cookies.txt LOCALLY"** para exportar tus cookies.
+3. En la app, pulsa **"Cargar cookies.txt"** y selecciona tu archivo.
+4. Pega el enlace y la miniatura aparecerá automáticamente confirmando el acceso.
 
 ---
 
-## ❤️ Apoya el Proyecto
-He desarrollado esta herramienta de forma gratuita para ayudar a la comunidad. Si esta aplicación te ha ahorrado tiempo o te ha sido útil, considera invitarme a un café. ¡Tu apoyo me ayuda a seguir manteniendo y mejorando el proyecto!
+## 🛠️ Tecnologías utilizadas
+* **Electron JS:** Framework de escritorio.
+* **yt-dlp:** Motor de descarga de última generación.
+* **FFmpeg:** Para la fusión de video y audio en alta calidad.
+* **CSS Moderno:** Uso de `clamp()`, `vh/vw` y Flexbox para el diseño proporcional.
+
+---
+
+## ❤️ Apoya el desarrollo
+Si esta herramienta te es útil para tu trabajo o día a día, puedes apoyar el mantenimiento del proyecto:
 
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/Hanks3)
 
 ---
 
 ## ⚖️ Licencia
-Este proyecto está bajo la licencia **GNU GPL v3**. Eres libre de usarlo, estudiarlo y modificarlo, siempre que cualquier trabajo derivado mantenga esta misma licencia abierta.
+Este proyecto es software libre bajo la licencia **GNU GPL v3**. 
 
-*Desarrollado por [Hanks3](https://github.com/Hanks3)*
+*Desarrollado con pasión por [Hanks3](https://github.com/Hanks3)*
