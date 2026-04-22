@@ -1,6 +1,6 @@
 {
   "name": "universal-downloader",
-  "version": "2.2.0",
+  "version": "2.5.0",
   "description": "Descargador de videos Universal",
   "main": "main.js",
   "scripts": {

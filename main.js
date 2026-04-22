@@ -3,10 +3,10 @@ const path = require('path');
 
 function crearVentana() {
     const mainWindow = new BrowserWindow({
-        width: 870,
-        height: 870,
+        width: 850,
+        height: 780,
         minWidth: 500,
-        minHeight: 500,
+        minHeight: 650,
         resizable: true,
         maximizable: false,
         webPreferences: {
