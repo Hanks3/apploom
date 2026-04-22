@@ -1,23 +1,21 @@
 # 🚀 Hanks3 Universal Downloader v2.5.0
 
-**Universal Downloader** es una solución profesional para la descarga de contenido multimedia, construida con Electron y potenciada por el motor `yt-dlp`. Esta versión 2.5.0 redefine la experiencia de usuario con un diseño totalmente adaptable y gestión de archivos integrada.
+**Universal Downloader** es una aplicación de escritorio profesional construida con **Electron** y potenciada por **yt-dlp**. Diseñada para ser rápida, intuitiva y, sobre todo, adaptable a cualquier pantalla.
 
-## ✨ Novedades en la v2.5.0
-* 🎨 **Interfaz Proporcional & Scalable:** Implementación de fuentes dinámicas y elementos que escalan proporcionalmente al tamaño de la ventana para una legibilidad perfecta en cualquier monitor.
-* 🌓 **Modo Dark/Light:** Soporte nativo para temas claro y oscuro con persistencia de configuración.
-* 📜 **Historial de Descargas Inteligente:** Nuevo panel lateral para gestionar tus archivos. Permite abrir el video, localizarlo en la carpeta o eliminarlo físicamente del disco junto con su registro.
-* 🔄 **Auto-Actualización del Motor:** Botón integrado con animación 360° para mantener `yt-dlp` siempre al día.
-* 🛠️ **Guía de Uso Detallada:** Instrucciones integradas para la gestión de cookies y contenido privado.
+## ✨ Funciones Destacadas
+* 📱 **Diseño Proporcional:** Interfaz construida con unidades relativas y tecnología `clamp()`, haciendo que las fuentes y elementos escalen perfectamente según el tamaño de la ventana para una legibilidad máxima.
+* 🌓 **Modo Dark/Light:** Elige el tema que prefieras con persistencia automática (recuerda tu elección al reiniciar).
+* 📜 **Gestión de Historial:** Panel lateral inteligente para abrir tus videos, localizarlos en la carpeta o eliminarlos físicamente del disco directamente desde la app.
+* 🔄 **Actualización de Motor:** Mantén siempre la compatibilidad con +1000 sitios gracias al botón de actualización integrada de `yt-dlp`.
+* 🖼️ **Vista Previa en Tiempo Real:** Visualización instantánea de miniaturas para confirmar el video antes de la descarga.
 
-## 🛠️ Tecnologías
-* **Motor:** yt-dlp (Compatibilidad con +1000 sitios).
-* **Entorno:** Electron JS.
-* **Diseño:** CSS Moderno (Variables, Flexbox, Grid y Clamp).
+## 🛠️ Requisitos
+* Tener `yt-dlp.exe` y `ffmpeg.exe` en la raíz de la aplicación.
+* (Opcional) Archivo `cookies.txt` para contenido privado.
 
-## 📖 Instalación Rápida
-1. Descarga el último ejecutable desde [Releases](https://github.com/Hanks3/apploom/releases).
-2. Asegúrate de tener `yt-dlp.exe` y `ffmpeg.exe` en la carpeta de la aplicación.
-3. ¡Pega tu enlace y disfruta!
+## 📖 Instalación
+1. Descarga el ejecutable desde la sección de [Releases](https://github.com/Hanks3/apploom/releases).
+2. Ejecuta el instalador y empieza a descargar contenido de YouTube, Instagram, TikTok, Loom y más.
 
 ---
-Desarrollado con ❤️ por [Hanks3](https://github.com/Hanks3)
+Desarrollado por [Hanks3](https://github.com/Hanks3)
