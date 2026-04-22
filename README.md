@@ -1,49 +1,23 @@
-# 🚀 Hanks3 Universal Downloader v2.2.0
+# 🚀 Hanks3 Universal Downloader v2.5.0
 
-**Universal Downloader** es una potente aplicación de escritorio basada en Electron y yt-dlp, diseñada para descargar video y audio de más de 1000 plataformas con una interfaz que se adapta perfectamente a tu espacio de trabajo.
+**Universal Downloader** es una solución profesional para la descarga de contenido multimedia, construida con Electron y potenciada por el motor `yt-dlp`. Esta versión 2.5.0 redefine la experiencia de usuario con un diseño totalmente adaptable y gestión de archivos integrada.
 
----
+## ✨ Novedades en la v2.5.0
+* 🎨 **Interfaz Proporcional & Scalable:** Implementación de fuentes dinámicas y elementos que escalan proporcionalmente al tamaño de la ventana para una legibilidad perfecta en cualquier monitor.
+* 🌓 **Modo Dark/Light:** Soporte nativo para temas claro y oscuro con persistencia de configuración.
+* 📜 **Historial de Descargas Inteligente:** Nuevo panel lateral para gestionar tus archivos. Permite abrir el video, localizarlo en la carpeta o eliminarlo físicamente del disco junto con su registro.
+* 🔄 **Auto-Actualización del Motor:** Botón integrado con animación 360° para mantener `yt-dlp` siempre al día.
+* 🛠️ **Guía de Uso Detallada:** Instrucciones integradas para la gestión de cookies y contenido privado.
 
-## 🌟 Características Destacadas
-* 📱 **Interfaz Adaptable (Responsive):** Diseño proporcional único que escala elementos y fuentes según el tamaño de la ventana. Ideal para monitores 4K o pantallas pequeñas de portátiles.
-* 🖼️ **Vista Previa Inteligente:** Confirmación visual inmediata del contenido antes de iniciar la descarga.
-* 🔐 **Gestión de Cookies Avanzada:** Selector nativo para cargar archivos `cookies.txt`, permitiendo el acceso a contenido privado o restringido.
-* ⚙️ **Calidad Flexible:** Descarga desde audio MP3 hasta video en Full HD (1080p).
-* ⚡ **Optimizado para Redes Sociales:** Parches específicos para saltar las restricciones de Instagram Reels y YouTube.
+## 🛠️ Tecnologías
+* **Motor:** yt-dlp (Compatibilidad con +1000 sitios).
+* **Entorno:** Electron JS.
+* **Diseño:** CSS Moderno (Variables, Flexbox, Grid y Clamp).
 
----
-
-## 📖 Guía de Uso
-
-### Instalación
-1. Descarga el instalador `.exe` desde la sección de [Releases](https://github.com/Hanks3/apploom/releases).
-2. Ejecuta `Hanks3.Universal.Downloader.Setup.2.2.0.exe`.
-
-### Descargar de Instagram / Contenido Privado
-Para obtener los mejores resultados en sitios con restricciones:
-1. **Loguéate** en el sitio (ej. Instagram) desde tu navegador Chrome/Edge.
-2. Usa la extensión **"Get cookies.txt LOCALLY"** para exportar tus cookies.
-3. En la app, pulsa **"Cargar cookies.txt"** y selecciona tu archivo.
-4. Pega el enlace y la miniatura aparecerá automáticamente confirmando el acceso.
+## 📖 Instalación Rápida
+1. Descarga el último ejecutable desde [Releases](https://github.com/Hanks3/apploom/releases).
+2. Asegúrate de tener `yt-dlp.exe` y `ffmpeg.exe` en la carpeta de la aplicación.
+3. ¡Pega tu enlace y disfruta!
 
 ---
-
-## 🛠️ Tecnologías utilizadas
-* **Electron JS:** Framework de escritorio.
-* **yt-dlp:** Motor de descarga de última generación.
-* **FFmpeg:** Para la fusión de video y audio en alta calidad.
-* **CSS Moderno:** Uso de `clamp()`, `vh/vw` y Flexbox para el diseño proporcional.
-
----
-
-## ❤️ Apoya el desarrollo
-Si esta herramienta te es útil para tu trabajo o día a día, puedes apoyar el mantenimiento del proyecto:
-
-[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/Hanks3)
-
----
-
-## ⚖️ Licencia
-Este proyecto es software libre bajo la licencia **GNU GPL v3**. 
-
-*Desarrollado con pasión por [Hanks3](https://github.com/Hanks3)*
+Desarrollado con ❤️ por [Hanks3](https://github.com/Hanks3)
